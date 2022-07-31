@@ -1,4 +1,4 @@
-package co.com.sofka.usecase.createhero;
+package co.com.sofka.usecase.hero.createhero;
 
 import co.com.sofka.model.hero.Hero;
 import co.com.sofka.model.hero.gateways.HeroRepository;
