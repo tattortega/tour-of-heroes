@@ -32,11 +32,4 @@ public class MongoRepositoryAdapter extends AdapterOperations<Hero, HeroDocument
     public Mono<Void> delete(String id) {
         return repository.deleteById(id);
     }
-
-    @Override
-    public Mono<Hero> update(String id, Hero hero) {
-        hero.setId(id);
-        return repository
-                .save(new HeroDocument(hero.getId(), hero.getName()))
-                .flatMap(element -> Mono.just(hero));    }
 }
