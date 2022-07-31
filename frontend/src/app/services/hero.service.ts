@@ -40,7 +40,7 @@ export class HeroService {
   }
 
   addHero(hero: Hero): Observable<Hero> {
-    const url = `${this.heroesUrl}/create`;
+    const url = `${this.heroesUrl}`;
     return this.http
       .post<Hero>
       (url, hero, this.httpOptions)
