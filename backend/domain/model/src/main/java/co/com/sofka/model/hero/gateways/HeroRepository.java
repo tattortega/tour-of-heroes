@@ -11,5 +11,4 @@ public interface HeroRepository {
     Mono<Hero> findById(String id);
     Flux<Hero> findByName(String name);
     Mono<Void> delete(String id);
-    Mono<Hero> update(String id, Hero hero);
 }

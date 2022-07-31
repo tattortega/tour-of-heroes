@@ -5,12 +5,15 @@ import co.com.sofka.model.hero.gateways.HeroRepository;
 import lombok.RequiredArgsConstructor;
 import reactor.core.publisher.Mono;
 
+import java.util.function.Function;
+
 @RequiredArgsConstructor
-public class CreateHeroUseCase {
+public class CreateHeroUseCase implements Function<Hero, Mono<Hero>> {
 
     private final HeroRepository repository;
 
-    public Mono<Hero> createHero(Hero hero){
+    @Override
+    public Mono<Hero> apply(Hero hero){
         return repository.save(hero);
     }
 }

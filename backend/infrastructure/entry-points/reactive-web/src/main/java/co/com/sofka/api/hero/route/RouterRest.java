@@ -1,5 +1,6 @@
 package co.com.sofka.api;
 
+import co.com.sofka.api.hero.handler.Handler;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.web.reactive.function.server.RouterFunction;
